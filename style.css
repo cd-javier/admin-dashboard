@@ -10,10 +10,14 @@
   --primary: #1a92d3;
   --accent: #facb15;
   --neutral: #e2e8f0;
+  --neutral-dark: #636464;
+  --neutral-darker: #252626;
+  --shadow: 0 2px 3px #63646455;
 }
 
 body {
   font-family: "Roboto", Helvetica, sans-serif;
+  background-color: var(--neutral);
 }
 
 .wrapper {
@@ -21,11 +25,60 @@ body {
   min-height: 100vh;
 
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: auto 1fr;
 }
 
+/* HEADER */
 .header {
   background-color: white;
+  padding: 1rem 2rem;
+
+  box-shadow: var(--shadow);
+}
+
+.header .status-bar {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.header .status-bar .icon {
+  fill: var(--neutral-darker);
+  height: 1.5rem;
+}
+
+.header .status-bar .thumbnail {
+  width: 3rem;
+  border-radius: 100%;
+}
+
+.header .status-bar form {
+  flex: 1;
+}
+
+.header .status-bar form input[type="search"] {
+  appearance: none;
+  width: 80%;
+  border: none;
+  outline: none;
+  background-color: var(--neutral);
+  border-radius: 100px;
+  padding: 0.25rem 1rem;
+}
+
+.header .status-bar a,
+.header .status-bar a:active,
+.header .status-bar a:visited {
+    color: var(--neutral-darker);
+    text-decoration: none;
+    font-weight: 600;
+
+    padding: 0 1rem;
+}
+
+.header .status-bar a:hover {
+    text-decoration: underline;
 }
 
 /* SIDEBAR */
@@ -73,8 +126,4 @@ body {
 
 .sidebar li + li {
   margin-top: 1rem;
-}
-
-.main {
-  background-color: var(--neutral);
 }
