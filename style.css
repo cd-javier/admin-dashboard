@@ -34,9 +34,13 @@ body {
   background-color: white;
   padding: 1rem 2rem;
 
+  display: grid;
+  gap: 1rem;
+
   box-shadow: var(--shadow);
 }
 
+/* STATUS BAR */
 .header .status-bar {
   display: flex;
   gap: 1rem;
@@ -79,6 +83,48 @@ body {
 
 .header .status-bar a:hover {
     text-decoration: underline;
+}
+
+/* GREETING BAR */
+.header .greeting-bar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header .greeting-bar .thumbnail {
+    width: 4rem;
+    border-radius: 100%;
+}
+
+.header .greeting-bar .greeting {
+    flex: 1;
+
+    color: var(--neutral-darker)
+}
+
+.header .greeting-bar .greeting p {
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+.header .greeting-bar .greeting h2 {
+    font-size: 1.25rem;
+}
+
+.header .greeting-bar .nav {
+    display: flex;
+    list-style-type: none;
+    gap: 1rem;
+}
+
+.header .greeting-bar .nav button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background-color: var(--primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
 }
 
 /* SIDEBAR */
