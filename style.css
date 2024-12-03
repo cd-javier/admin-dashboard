@@ -21,8 +21,8 @@ body {
 }
 
 h2 {
-    font-size: 1.25rem;
-    font-weight: 600;
+  font-size: 1.25rem;
+  font-weight: 600;
 }
 
 .wrapper {
@@ -79,54 +79,54 @@ h2 {
 .header .status-bar a,
 .header .status-bar a:active,
 .header .status-bar a:visited {
-    color: var(--neutral-darker);
-    text-decoration: none;
-    font-weight: 600;
+  color: var(--neutral-darker);
+  text-decoration: none;
+  font-weight: 600;
 
-    padding: 0 1rem;
+  padding: 0 1rem;
 }
 
 .header .status-bar a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* GREETING BAR */
 .header .greeting-bar {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .header .greeting-bar .thumbnail {
-    width: 4rem;
-    border-radius: 100%;
+  width: 4rem;
+  border-radius: 100%;
 }
 
 .header .greeting-bar .greeting {
-    flex: 1;
+  flex: 1;
 
-    color: var(--neutral-darker)
+  color: var(--neutral-darker);
 }
 
 .header .greeting-bar .greeting p {
-    font-size: 0.75rem;
-    font-weight: 600;
+  font-size: 0.75rem;
+  font-weight: 600;
 }
 
 .header .greeting-bar .nav {
-    display: flex;
-    list-style-type: none;
-    gap: 1rem;
+  display: flex;
+  list-style-type: none;
+  gap: 1rem;
 }
 
 .header .greeting-bar .nav button {
-    appearance: none;
-    border: none;
-    outline: none;
-    background-color: var(--primary);
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 2rem;
+  appearance: none;
+  border: none;
+  outline: none;
+  background-color: var(--primary);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
 }
 
 /* SIDEBAR */
@@ -179,16 +179,59 @@ h2 {
 /* MAIN */
 
 .main {
-    padding: 2rem 1rem;
-    display: grid;
-    grid-template-columns: 5fr 2fr;
-    grid-template-rows: 1fr 1fr;
+  padding: 2rem 1rem;
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+}
+
+.main .projects,
+.main .announcements,
+.main .trending {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 0.5rem;
 }
 
 .main .projects {
-    grid-row: 1 / span 2;
+  grid-row: 1 / span 2;
 }
 
-.main > * {
-    border:  solid #000;
+.main .projects .card-container {
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.main .card {
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: var(--shadow);
+}
+
+.main .project-card {
+  border-left: 8px solid var(--accent);
+  padding: 1.5rem;
+
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 0.5rem;
+}
+
+.main .project-card .icon-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+}
+
+.project-card p {
+  color: var(--neutral-dark);
+}
+
+.main .project-card .icon-wrapper .icon {
+  fill: var(--neutral-darker);
+  height: 1.5rem;
 }
