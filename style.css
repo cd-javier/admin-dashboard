@@ -1,2 +1,28 @@
 @import url(./modern-normalize.css);
 
+:root {
+    --primary: #1A92D3;
+    --accent: #FACB15;
+    --neutral: #E2E8F0;
+}
+
+.wrapper {
+    min-width: 100vw;
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.header {
+    background-color: white;
+}
+
+.sidebar {
+    background-color: var(--primary);
+    grid-row: 1 / 3;
+}
+
+.main {
+    background-color: var(--neutral);
+}
