@@ -20,6 +20,11 @@ body {
   background-color: var(--neutral);
 }
 
+h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
 .wrapper {
   min-width: 100vw;
   min-height: 100vh;
@@ -107,9 +112,6 @@ body {
     font-size: 0.75rem;
     font-weight: 600;
 }
-.header .greeting-bar .greeting h2 {
-    font-size: 1.25rem;
-}
 
 .header .greeting-bar .nav {
     display: flex;
@@ -172,4 +174,21 @@ body {
 
 .sidebar li + li {
   margin-top: 1rem;
+}
+
+/* MAIN */
+
+.main {
+    padding: 2rem 1rem;
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.main .projects {
+    grid-row: 1 / span 2;
+}
+
+.main > * {
+    border:  solid #000;
 }
